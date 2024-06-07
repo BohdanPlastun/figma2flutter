@@ -1,13 +1,10 @@
 import 'package:figma2flutter/exceptions/resolve_token_exception.dart';
 import 'package:figma2flutter/models/token.dart';
-import 'package:figma2flutter/transformers/transformer.dart';
 import 'package:meta/meta.dart';
 
 class TokenTheme {
   final String name;
   final List<String> sets;
-
-  final List<Transformer> transformers = [];
 
   @visibleForTesting
   final Map<String, Token> tokens = {};

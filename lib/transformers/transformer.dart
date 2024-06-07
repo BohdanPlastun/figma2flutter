@@ -65,11 +65,3 @@ abstract class SingleTokenTransformer extends Transformer {
     }
   }
 }
-
-abstract class MultiTokenTransformer extends Transformer {
-  final List<Token> token;
-
-  MultiTokenTransformer(this.token);
-
-  void postProcess();
-}

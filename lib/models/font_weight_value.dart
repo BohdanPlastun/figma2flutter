@@ -1,4 +1,5 @@
 import 'package:collection/collection.dart';
+import 'package:recase/recase.dart';
 
 /// https://tr.designtokens.org/format/#font-weight
 ///
@@ -35,7 +36,7 @@ class FontWeightValue {
       return FontWeightValue(intValue);
     } else if (value is String) {
       final fontWeight = _fontWeightMap.entries.firstWhereOrNull(
-        (entry) => entry.value.contains(value.toLowerCase()),
+            (entry) => entry.value.contains(value.paramCase.toLowerCase()),
       );
       if (fontWeight != null) {
         return FontWeightValue(fontWeight.key);

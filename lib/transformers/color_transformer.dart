@@ -26,9 +26,9 @@ class ColorTransformer extends SingleTokenTransformer {
   @override
   bool matcher(Token token) =>
       token.type == 'color' &&
-      (token.valueAsString?.startsWith('#') == true ||
-          token.valueAsString?.startsWith('rgb') == true ||
-          token.valueAsString?.startsWith('hsl') == true);
+          (token.valueAsString?.startsWith('#') == true ||
+              token.valueAsString?.startsWith('rgb') == true ||
+              token.valueAsString?.startsWith('hsl') == true);
 
   @override
   String transform(Token token) {
@@ -60,6 +60,6 @@ class ColorTransformer extends SingleTokenTransformer {
       }
     }
 
-    return colorValue.declaration();
+    return colorValue.declaration(isConst: false);
   }
 }

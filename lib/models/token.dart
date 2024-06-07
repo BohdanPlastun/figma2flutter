@@ -230,8 +230,7 @@ class Token {
 
   // If the value is a reference and starts with 'rgba', we need to
   // resolve the reference to the color token and use the value of that
-  // token as the value of this token. See [references_test.dart:145] for
-  // an example. Eg: rgba({brand.500}, 0.5) => rgba(255, 255, 255, 0.5)
+  // token as the value of this token.
   Token _resolveColorReferences(Map<String, Token> tokenMap) {
     final value = _resolveColorValue(valueAsString!, tokenMap);
     if (value != null) {
@@ -309,9 +308,6 @@ String? _resolveColorValue(String initialValue, Map<String, Token> tokenMap) {
     final color = ColorValue.maybeParse(reference.value);
     if (color == null) {
       return null;
-      // throw ResolveTokenException(
-      //   'Could not parse color for `${reference.value}` originating from `${match.group(1)}`',
-      // );
     }
 
     // Check if is inside a rgba() function

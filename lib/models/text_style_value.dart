@@ -48,7 +48,7 @@ class TextStyleValue {
 
     if (parts.isEmpty) return 'const TextStyle()';
 
-    return '''const TextStyle(
+    return '''TextStyle(
   ${parts.join(',\n  ')},
 )''';
   }

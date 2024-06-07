@@ -7,6 +7,9 @@ const kBaseFontSize = 16.0;
 /// Px values are converted to a double and returned as is.
 /// Last but not least, if the value is a number, it is converted to a double and returned as is.
 /// And if the value is not a number 0 is returned.
+
+
+//todo maybe delete it
 class DimensionValue {
   final double value;
 
